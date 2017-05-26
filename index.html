@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <div id="map">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8 form-inline ">
+          <div class="col-sm-6">
+            <span class="glyphicon glyphicon-record"></span>
+            <input type="text" class="form-control" id="punto-partida" placeholder="Ingresa tu partida">
+          </div>
+          <div class="col-sm-6">
+            <span class="glyphicon glyphicon-send"></span>
+            <input type="text" class="form-control" id="punto-destino" placeholder="Ingresa tu destino">
+          </div>
+          <div class="divider"></div>
+        </div>
+        <!-- Standard button -->
+        <div class="col-sm-4 form-inline  ">
+          <button type="button" class="form-control" id="encuentrame">Encuentrame</button>
+          <button type="button" class="form-control" id="trazar-ruta">Trazar ruta</button>
+      </div>
+      </div>
+    </div>
+    <div class="container-fluid">
 
-  </div>
-  <button type="button" class="" id="encuentrame">
-    Encuentrame
-  </button>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYOLE28FgNpPeQ7sIlgS9saT5h6p5jys&callback=initMap">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYOLE28FgNpPeQ7sIlgS9saT5h6p5jys&callback=initMap&libraries=places"> </script>
+      <script type="text/javascript" src="js/app.js">  </script>
+    <!-- jQuery (necesario para que funcionen los componentes de Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Incluir todos tus scripts apartir de este punto -->
+    <script src="js/bootstrap.min.js"></script>
 
-  </script>
-  <script type="text/javascript" src="js/app.js">
-
-  </script>
-</body>
+  </body>
 </html>
